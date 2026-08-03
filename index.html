@@ -20,20 +20,78 @@
 
     <main>
 
-        <section id="search-section">
+    <section id="search-section">
+        <h2>Search</h2>
 
-        </section>
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search by municipality..."
+        >
+    </section>
 
-        <section id="statistics">
 
-        </section>
+    <section id="statistics">
 
-        <section id="data-table">
+        <h2>Statistics</h2>
 
-        </section>
+        <div class="stats-container">
 
-    </main>
+            <div class="stat-card">
+                <h3>Total Records</h3>
+                <p id="total-records">--</p>
+            </div>
 
+            <div class="stat-card">
+                <h3>Highest Municipality</h3>
+                <p id="highest-municipality">--</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Lowest Municipality</h3>
+                <p id="lowest-municipality">--</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="data-table">
+
+        <h2>Employment Data</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Municipality</th>
+
+                    <th>Year</th>
+
+                    <th>Total</th>
+
+                    <th>Male</th>
+
+                    <th>Female</th>
+
+                    <th>Education</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="table-body">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
     <script src="js/app.js"></script>
 
 </body>
