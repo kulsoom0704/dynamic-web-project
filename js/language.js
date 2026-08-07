@@ -1,6 +1,7 @@
 const translations = {
 
     en: {
+        favorite: "❤️",
         searchMunicipality: "Search Municipality",
         year: "Year",
         sort: "Sort",
@@ -22,6 +23,7 @@ const translations = {
     },
 
     fr: {
+        favorite: "❤️",
         searchMunicipality: "Rechercher une commune",
         year: "Année",
         sort: "Trier",
@@ -43,6 +45,7 @@ const translations = {
     },
 
     nl: {
+        favorite: "❤️",
         searchMunicipality: "Zoek gemeente",
         year: "Jaar",
         sort: "Sorteren",

@@ -195,3 +195,32 @@ body.dark-mode select {
     color: white;
     border: 1px solid #555;
 }
+.favorite-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+.favorites-container{
+    margin:20px 0;
+}
+
+#favorites-toggle{
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    background:#1565a3;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.2s;
+}
+
+#favorites-toggle:hover{
+    opacity:0.9;
+}

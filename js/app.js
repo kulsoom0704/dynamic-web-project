@@ -78,21 +78,48 @@ switch (sortFilter.value) {
     } else {
         noResultsMessage.style.display = "none";
     }
+// Show Favorites Only 
+    if (showFavoritesOnly) {
+
+    const favorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+
+    filteredData = filteredData.filter(record =>
+        favorites.includes(`${record.commune}-${record.annee}`)
+    );
+
+}
 
         displayTable({ results: filteredData });
     }
-
-    // Event listeners
-    searchInput.addEventListener("input", applyFiltersAndSort);
-    yearFilter.addEventListener("change", applyFiltersAndSort);
-    sortFilter.addEventListener("change", applyFiltersAndSort);
-
     // Statistics
-    totalRecordsElement.textContent = data.total_count;
-    displayStatistics(data);
+totalRecordsElement.textContent = data.total_count;
+displayStatistics(data);
 
-    // Initial table
+const favoritesButton = document.getElementById("favorites-toggle");
+let showFavoritesOnly = false;
+
+// Event listeners
+searchInput.addEventListener("input", applyFiltersAndSort);
+yearFilter.addEventListener("change", applyFiltersAndSort);
+sortFilter.addEventListener("change", applyFiltersAndSort);
+
+// Favorites button
+favoritesButton.addEventListener("click", () => {
+
+    showFavoritesOnly = !showFavoritesOnly;
+
+    favoritesButton.textContent = showFavoritesOnly
+        ? "📋 Show All"
+        : "❤️ Show Favorites Only";
+
     applyFiltersAndSort();
+
+});
+
+// Initial table
+applyFiltersAndSort();
+
 }
 
 initializeApp();
