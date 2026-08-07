@@ -2,6 +2,8 @@ import { fetchEmploymentData } from "./api.js";
 import { displayTable, displayStatistics } from "./display.js";
 import { searchMunicipality } from "./search.js";
 import { showFilter } from "./filter.js";
+import { initializeTheme } from "./theme.js";
+
 
 console.log("App.js is connected successfully!");
 
@@ -83,7 +85,7 @@ switch (sortFilter.value) {
     searchInput.addEventListener("input", applyFiltersAndSort);
     yearFilter.addEventListener("change", applyFiltersAndSort);
     sortFilter.addEventListener("change", applyFiltersAndSort);
-    
+
     // Statistics
     totalRecordsElement.textContent = data.total_count;
     displayStatistics(data);
@@ -93,3 +95,4 @@ switch (sortFilter.value) {
 }
 
 initializeApp();
+initializeTheme();

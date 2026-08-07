@@ -166,3 +166,32 @@ td:last-child{
     border-radius: 8px;
     font-weight: bold;
 }
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode table {
+    background-color: #2b2b2b;
+}
+
+body.dark-mode th {
+    background-color: #0d5c99;
+}
+
+body.dark-mode td {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+body.dark-mode .stat-card {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
