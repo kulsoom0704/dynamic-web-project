@@ -3,6 +3,7 @@ import { displayTable, displayStatistics } from "./display.js";
 import { searchMunicipality } from "./search.js";
 import { showFilter } from "./filter.js";
 import { initializeTheme } from "./theme.js";
+import { initializeLanguage } from "./language.js";
 
 
 console.log("App.js is connected successfully!");
@@ -96,3 +97,4 @@ switch (sortFilter.value) {
 
 initializeApp();
 initializeTheme();
+initializeLanguage();

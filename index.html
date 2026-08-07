@@ -22,7 +22,9 @@
         <div class="toolbar">
 
     <div class="toolbar-item">
-        <label for="search-input">Search Municipality</label>
+        <label for="search-input" data-translate="searchMunicipality">
+            Search Municipality
+        </label>
         <input
             type="text"
             id="search-input"
@@ -31,84 +33,97 @@
     </div>
 
     <div class="toolbar-item">
-        <label for="year-filter">Year</label>
+        <label for="year-filter" data-translate="year">
+                Year
+        </label>
         <select id="year-filter">
             <option value="">All Years</option>
         </select>
     </div>
 
     <div class="toolbar-item">
-        <label for="sort-filter">Sort</label>
+        <label for="sort-filter" data-translate="sort">
+            Sort
+        </label>
         <select id="sort-filter">
+
             <option value="">Default</option>
             <option value="municipality-asc">Municipality A-Z</option>
             <option value="municipality-desc">Municipality Z-A</option>
             <option value="highest-jobseekers">Highest Jobseekers</option>
             <option value="lowest-jobseekers">Lowest Jobseekers</option>
         </select>
-        <button id="theme-toggle">
-        🌙 Dark Mode
-    </button>
+        
+        <button
+            id="theme-toggle"
+            data-translate="darkMode">
+            🌙 Dark Mode
+        </button>
+
+        <select id="language-select">
+        <option value="en">🇬🇧 English</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="nl">🇳🇱 Nederlands</option>
+    </select>
+
     </div>
-    <p id="no-results-message" class="no-results">
-    No records found for the selected search year.
-    Try another municipality or year.
+        <p
+            id="no-results-message"
+            class="no-results"
+            data-translate="noResults">
+         No matching records found. Try another municipality or select another year.
         </p>
 </div>
 
 
-    <section id="statistics">
+    <h2 data-translate="statistics">Statistics</h2>
 
-        <h2>Statistics</h2>
+<div class="stats-container">
 
-        <div class="stats-container">
+    <div class="stat-card">
+        <h3 data-translate="totalRecords">Total Records</h3>
+        <p id="total-records">--</p>
+    </div>
 
-            <div class="stat-card">
-                <h3>Total Records</h3>
-                <p id="total-records">--</p>
-            </div>
+    <div class="stat-card">
+        <h3 data-translate="highestJobseekers">Highest Jobseekers</h3>
+        <h2 id="highest-municipality">--</h2>
+        <p id="highest-jobseekers">--</p>
+    </div>
 
-            <div class="stat-card">
-                <h3>Highest Jobseekers</h3>
-                <h2 id="highest-municipality">--</h2>
-                <p id="highest-jobseekers">--</p>
-            </div>
+    <div class="stat-card">
+        <h3 data-translate="lowestJobseekers">Lowest Jobseekers</h3>
+        <h2 id="lowest-municipality">--</h2>
+        <p id="lowest-jobseekers">--</p>
+    </div>
 
-            <div class="stat-card">
-                <h3>Lowest Jobseekers</h3>
-                <h2 id="lowest-municipality">--</h2>
-                <p id="lowest-jobseekers">--</p>
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<section id="data-table">
 
+    <h2 data-translate="employmentData">Employment Data</h2>
 
-    <section id="data-table">
+    <table>
 
-        <h2>Employment Data</h2>
+        <thead>
+            <tr>
+                <th data-translate="municipality">Municipality</th>
+                <th data-translate="year">Year</th>
+                <th data-translate="totalJobseekers">Total Jobseekers</th>
+                <th data-translate="men">Men (%)</th>
+                <th data-translate="women">Women (%)</th>
+                <th data-translate="educationLevel">Education Level (%)</th>
+            </tr>
+        </thead>
 
-        <table>
+        <tbody id="table-body">
+        </tbody>
 
-            <thead>
-                <tr>
-                    <th>Municipality</th>
-                    <th>Year</th>
-                    <th>Total Jobseekers</th>
-                    <th>Men (%)</th>
-                    <th>Women (%)</th>
-                    <th>Education Level(%)</th>
-                </tr>
-            </thead>
+    </table>
 
-            <tbody id="table-body">
-
-            </tbody>
-
-        </table>
-
-    </section>
+</section>
 
 </main>
 
