@@ -19,16 +19,39 @@
     </header>
 
     <main>
+        <div class="toolbar">
 
-    <section id="search-section">
-        <h2>Search</h2>
-
+    <div class="toolbar-item">
+        <label for="search-input">Search Municipality</label>
         <input
             type="text"
             id="search-input"
-            placeholder="Search by municipality..."
+            placeholder="Search municipality..."
         >
-    </section>
+    </div>
+
+    <div class="toolbar-item">
+        <label for="year-filter">Year</label>
+        <select id="year-filter">
+            <option value="">All Years</option>
+        </select>
+    </div>
+
+    <div class="toolbar-item">
+        <label for="sort-filter">Sort</label>
+        <select id="sort-filter">
+            <option value="">Default</option>
+            <option value="municipality-asc">Municipality A-Z</option>
+            <option value="municipality-desc">Municipality Z-A</option>
+            <option value="highest-jobseekers">Highest Jobseekers</option>
+            <option value="lowest-jobseekers">Lowest Jobseekers</option>
+        </select>
+    </div>
+    <p id="no-results-message" class="no-results">
+    No records found for the selected search year.
+    Try another municipality or year.
+        </p>
+</div>
 
 
     <section id="statistics">

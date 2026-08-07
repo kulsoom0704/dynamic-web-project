@@ -129,3 +129,40 @@ th {
 td:last-child{
     text-align: center;
 }
+/* ---------- SEARCH & FILTER ---------- */
+
+.search-filter-container {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    font-weight: bold;
+}

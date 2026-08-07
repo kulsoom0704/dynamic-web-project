@@ -8,4 +8,3 @@ export async function fetchEmploymentData() {
 
     return data;
 }
-// fetchEmploymentData();
