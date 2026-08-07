@@ -4,6 +4,7 @@ import { searchMunicipality } from "./search.js";
 import { showFilter } from "./filter.js";
 import { initializeTheme } from "./theme.js";
 import { initializeLanguage } from "./language.js";
+import { initializeObserver } from "./observer.js";
 
 
 console.log("App.js is connected successfully!");
@@ -119,6 +120,9 @@ favoritesButton.addEventListener("click", () => {
 
 // Initial table
 applyFiltersAndSort();
+
+// Start the observer AFTER everything has loaded
+initializeObserver();
 
 }
 
