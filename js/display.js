@@ -25,7 +25,7 @@ const educationClass =
         <tr>
             <td>${record.commune}</td>
             <td>${record.annee}</td>
-            <td>${record.total_commune}</td>
+            <td>${record.total_commune.toLocaleString()}</td>
             <td>${record.hommes_pc.toFixed(2)}%</td>
             <td>${record.femmes_pc.toFixed(2)}%</td>
             <td>
